@@ -1,31 +1,31 @@
 $(function() {
-  var center = new google.maps.LatLng(42.358431, -71.059773);
+  var center = new google.maps.LatLng(33.76752956, -84.33478421);
   var mapOptions = {
     center: center,
-    disableDoubleClickZoom: true,
+    disableDoubleClickZoom: false,
     keyboardShortcuts: false,
     mapTypeControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    maxZoom: 19,
-    minZoom: 15,
+    maxZoom: 21,
+    minZoom: 14,
     panControl: false,
     rotateControl: false,
     scaleControl: false,
     scrollwheel: false,
     streetViewControl: true,
-    zoom: 15,
+    zoom: 18,
     zoomControl: true
   };
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  var size = new google.maps.Size(27.0, 37.0);
+  var size = new google.maps.Size(10.0, 10.0);
   var origin = new google.maps.Point(0, 0);
-  var anchor = new google.maps.Point(13.0, 18.0);
+  var anchor = new google.maps.Point(1.0, 1.0);
   var greenMarkerImage = new google.maps.MarkerImage('<%= image_path 'markers/green.png' %>',
     size,
     origin,
     anchor
   );
-  var redMarkerImage = new google.maps.MarkerImage('<%= image_path 'markers/red.png' %>',
+  var redMarkerImage = new google.maps.MarkerImage('<%= image_path 'markers/small_red_dot.png' %>',
     size,
     origin,
     anchor
